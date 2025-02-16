@@ -1,14 +1,34 @@
 package com.optiomagrowth.licenses.domain;
 
 public class License {
-  private String id;
+  private int id;
   private String productName;
   private String licenseType;
   private String organizationId;
+  private String licenseId;
+  private String description;
 
-  public License withId(String id) {
+  public License withId(int id) {
     this.id = id;
     return this;
+  }
+
+  public License withDescription(String description) {
+    this.description = description;
+    return this;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public License withLicenseId(String licenseId) {
+    this.licenseId = licenseId;
+    return this;
+  }
+
+  public String getLicenseId() {
+    return licenseId;
   }
 
   public License withProductName(String productName) {
@@ -26,7 +46,7 @@ public class License {
     return this;
   }
 
-  public String getId() {
+  public int getId() {
     return id;
   }
 
